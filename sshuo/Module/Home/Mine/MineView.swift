@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import UIKit
+
 
 struct MineView: View {
-    
+
+    @Environment(\.colorScheme) var cs
+
     var body: some View {
+        
         ScrollView {
-            
-            Text("Mine").font(.title)
-            
+            VStack() {
+                
+                ButtomItem(text: "创作者中心", icon: "wand.and.rays")
+                ButtomDanger(text: "退出登录")
+
+            }
+
         }
+        .padding()
+        .background(
+            Rectangle()
+                .fill(theme(cs).viewD1L2)
+        )
     }
     
 }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		854255A62560491300CCAD4D /* Buttom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854255A52560491200CCAD4D /* Buttom.swift */; };
 		85F0EF8C255E842D0022CA55 /* sshuoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EF8B255E842D0022CA55 /* sshuoApp.swift */; };
-		85F0EF8E255E842D0022CA55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EF8D255E842D0022CA55 /* ContentView.swift */; };
 		85F0EF90255E842E0022CA55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F0EF8F255E842E0022CA55 /* Assets.xcassets */; };
 		85F0EF93255E842E0022CA55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F0EF92255E842E0022CA55 /* Preview Assets.xcassets */; };
 		85F0EFA2255E86FD0022CA55 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFA1255E86FD0022CA55 /* HomeView.swift */; };
@@ -16,12 +16,14 @@
 		85F0EFAA255E87700022CA55 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFA9255E87700022CA55 /* DiaryView.swift */; };
 		85F0EFAD255E878B0022CA55 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFAC255E878B0022CA55 /* Share.swift */; };
 		85F0EFB0255E87B30022CA55 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFAF255E87B30022CA55 /* MineView.swift */; };
+		85F0EFC7255EDEBD0022CA55 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFC6255EDEBD0022CA55 /* MainTheme.swift */; };
+		85F0EFD4255F7F750022CA55 /* DWLinerBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFD3255F7F750022CA55 /* DWLinerBackgroundModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		854255A52560491200CCAD4D /* Buttom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttom.swift; sourceTree = "<group>"; };
 		85F0EF88255E842D0022CA55 /* sshuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sshuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F0EF8B255E842D0022CA55 /* sshuoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sshuoApp.swift; sourceTree = "<group>"; };
-		85F0EF8D255E842D0022CA55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85F0EF8F255E842E0022CA55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F0EF92255E842E0022CA55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85F0EF94255E842E0022CA55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,8 +31,10 @@
 		85F0EFA6255E87450022CA55 /* AnalyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyView.swift; sourceTree = "<group>"; };
 		85F0EFA9255E87700022CA55 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		85F0EFAC255E878B0022CA55 /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
-		85F0EFAF255E87B30022CA55 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
+		85F0EFAF255E87B30022CA55 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		85F0EFB2255E95BD0022CA55 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		85F0EFC6255EDEBD0022CA55 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		85F0EFD3255F7F750022CA55 /* DWLinerBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWLinerBackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		854255A4256048D500CCAD4D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		854255A92560492000CCAD4D /* Buttom */ = {
+			isa = PBXGroup;
+			children = (
+				854255A52560491200CCAD4D /* Buttom.swift */,
+			);
+			path = Buttom;
+			sourceTree = "<group>";
+		};
 		85F0EF7F255E842D0022CA55 = {
 			isa = PBXGroup;
 			children = (
@@ -63,10 +82,12 @@
 		85F0EF8A255E842D0022CA55 /* sshuo */ = {
 			isa = PBXGroup;
 			children = (
+				85F0EFD0255F7EEA0022CA55 /* Public */,
+				85F0EFCA255F7BF10022CA55 /* Component */,
+				85F0EFC5255EDE990022CA55 /* Theme */,
 				85F0EFB2255E95BD0022CA55 /* Resources */,
 				85F0EF9B255E84FB0022CA55 /* Module */,
 				85F0EF8B255E842D0022CA55 /* sshuoApp.swift */,
-				85F0EF8D255E842D0022CA55 /* ContentView.swift */,
 				85F0EF8F255E842E0022CA55 /* Assets.xcassets */,
 				85F0EF94255E842E0022CA55 /* Info.plist */,
 				85F0EF91255E842E0022CA55 /* Preview Content */,
@@ -132,6 +153,63 @@
 				85F0EFA6255E87450022CA55 /* AnalyView.swift */,
 			);
 			path = Analy;
+			sourceTree = "<group>";
+		};
+		85F0EFC5255EDE990022CA55 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				85F0EFC6255EDEBD0022CA55 /* MainTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		85F0EFCA255F7BF10022CA55 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				854255A92560492000CCAD4D /* Buttom */,
+				85F0EFCB255F7BFC0022CA55 /* View */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		85F0EFCB255F7BFC0022CA55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85F0EFDC255F84CD0022CA55 /* TabView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F0EFD0255F7EEA0022CA55 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				85F0EFD1255F7F3E0022CA55 /* View */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		85F0EFD1255F7F3E0022CA55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				854255A4256048D500CCAD4D /* New Group */,
+				85F0EFD2255F7F4F0022CA55 /* Modifier */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F0EFD2255F7F4F0022CA55 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				85F0EFD3255F7F750022CA55 /* DWLinerBackgroundModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		85F0EFDC255F84CD0022CA55 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +285,10 @@
 				85F0EFAD255E878B0022CA55 /* Share.swift in Sources */,
 				85F0EFA2255E86FD0022CA55 /* HomeView.swift in Sources */,
 				85F0EFB0255E87B30022CA55 /* MineView.swift in Sources */,
-				85F0EF8E255E842D0022CA55 /* ContentView.swift in Sources */,
 				85F0EFA7255E87450022CA55 /* AnalyView.swift in Sources */,
+				85F0EFC7255EDEBD0022CA55 /* MainTheme.swift in Sources */,
+				85F0EFD4255F7F750022CA55 /* DWLinerBackgroundModifier.swift in Sources */,
+				854255A62560491300CCAD4D /* Buttom.swift in Sources */,
 				85F0EF8C255E842D0022CA55 /* sshuoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
