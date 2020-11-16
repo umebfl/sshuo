@@ -13,12 +13,36 @@ import SwiftUI
 struct ButtomDanger: View {
     
     @Environment(\.colorScheme) var cs
+
+    @State var isAlert = false
     
     var text: String
+
+    var alertTitle: String
+    var alertMessage: String
+
+    var yesText: String?
+    var noText: String?
+
+    var yesAction: () -> ()
+//    var noAction: () -> ()
     
+
     var body: some View {
-        Button(action: {
-            print("退出登录")
+        
+        var alert: Alert {
+            Alert(title: Text(alertTitle),
+            message: Text(alertMessage),
+            primaryButton: Alert.Button.destructive(Text(noText ?? "取消")) {
+//                noAction()
+            },
+            secondaryButton: Alert.Button.default(Text(yesText ?? "确认")) {
+                yesAction()
+            })
+        }
+
+        return Button(action: {
+            self.isAlert = true
         }){
             HStack() {
                 Spacer()
@@ -26,12 +50,16 @@ struct ButtomDanger: View {
                     .font(.system(size: 18))
                 Spacer()
             }
+            .padding()
             .frame(height: 50)
             .foregroundColor(theme(cs).lvDanger)
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .fill(theme(cs).viewD2L1)
             )
+            .alert(isPresented: $isAlert, content: {
+                alert
+            })
         }
     }
     
@@ -76,9 +104,7 @@ struct ButtomItem: View {
 
                 Spacer()
 
-                Image(systemName: "chevron.compact.right")
-                    .font(.system(size: 16))
-                    .accentColor(theme(cs).textL2)
+                ArrowIcon()
             }
             .padding()
             .frame(height: 50)

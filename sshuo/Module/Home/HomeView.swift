@@ -18,17 +18,6 @@ struct HomeView: View {
 
     var body: some View {
         TabView(selection: .constant(4)) {
-            DiaryView().tabItem {
-                Image(systemName: "book")
-                    .frame(width: 22, height: 32)
-                    .font(.system(size: 22, weight: .light))
-                    .aspectRatio(contentMode: .fill)
-                
-                Text("我的")
-                    .font(.largeTitle)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                
-            }.tag(1)
             ShareView().tabItem {
                 Image(systemName: "bubble.left.and.bubble.right")
                     .frame(width: 22, height: 32)
@@ -36,9 +25,30 @@ struct HomeView: View {
                     .aspectRatio(contentMode: .fill)
                 
                 Text("发现")
-                    .font(.system(size: 40, weight: .light))
-                    .foregroundColor(.red)
             }.tag(2)
+            DiaryView().tabItem {
+                Image(systemName: "book")
+                    .frame(width: 22, height: 32)
+                    .font(.system(size: 22, weight: .light))
+                    .aspectRatio(contentMode: .fill)
+                
+                Text("我的")
+            }.tag(1)
+            AnalyView().tabItem {
+                // cloud.bolt.rain 雷暴雨
+                // cloud.bolt 雷电
+                // cloud.drizzle 下雨
+                // cloud 普通
+                // cloud.moon 夜晚 cloud.sun 太阳
+                // cloud.sun.rain 太阳雨 cloud.moon.rain
+                // cloud.snow 下雪
+                Image(systemName: "cloud")
+                    .frame(width: 22, height: 32)
+                    .font(.system(size: 22, weight: .light))
+                    .aspectRatio(contentMode: .fill)
+                
+                Text("云村")
+            }.tag(3)
             AnalyView().tabItem {
                 Image(systemName: "wand.and.stars")
                     .frame(width: 22, height: 32)
@@ -47,7 +57,7 @@ struct HomeView: View {
                 
                 Text("状态")
             }.tag(3)
-            MineView().tabItem {
+            AccountView().tabItem {
                 Image(systemName: "person")
                     .frame(width: 22, height: 32)
                     .font(.system(size: 12, weight: .light))

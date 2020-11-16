@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		854255A62560491300CCAD4D /* Buttom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854255A52560491200CCAD4D /* Buttom.swift */; };
+		854255AC2560D77500CCAD4D /* ModuleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854255AB2560D77500CCAD4D /* ModuleViewModifier.swift */; };
+		854255B52560E28800CCAD4D /* BlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854255B42560E28800CCAD4D /* BlockList.swift */; };
+		85ABD5B5256156EC00E5C0E6 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5B4256156EC00E5C0E6 /* Arrow.swift */; };
+		85ABD62A25616E8D00E5C0E6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD62925616E8D00E5C0E6 /* Launch Screen.storyboard */; };
 		85F0EF8C255E842D0022CA55 /* sshuoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EF8B255E842D0022CA55 /* sshuoApp.swift */; };
 		85F0EF90255E842E0022CA55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F0EF8F255E842E0022CA55 /* Assets.xcassets */; };
 		85F0EF93255E842E0022CA55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F0EF92255E842E0022CA55 /* Preview Assets.xcassets */; };
@@ -15,13 +19,17 @@
 		85F0EFA7255E87450022CA55 /* AnalyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFA6255E87450022CA55 /* AnalyView.swift */; };
 		85F0EFAA255E87700022CA55 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFA9255E87700022CA55 /* DiaryView.swift */; };
 		85F0EFAD255E878B0022CA55 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFAC255E878B0022CA55 /* Share.swift */; };
-		85F0EFB0255E87B30022CA55 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFAF255E87B30022CA55 /* MineView.swift */; };
+		85F0EFB0255E87B30022CA55 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFAF255E87B30022CA55 /* AccountView.swift */; };
 		85F0EFC7255EDEBD0022CA55 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFC6255EDEBD0022CA55 /* MainTheme.swift */; };
 		85F0EFD4255F7F750022CA55 /* DWLinerBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0EFD3255F7F750022CA55 /* DWLinerBackgroundModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		854255A52560491200CCAD4D /* Buttom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttom.swift; sourceTree = "<group>"; };
+		854255AB2560D77500CCAD4D /* ModuleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewModifier.swift; sourceTree = "<group>"; };
+		854255B42560E28800CCAD4D /* BlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockList.swift; sourceTree = "<group>"; };
+		85ABD5B4256156EC00E5C0E6 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		85ABD62925616E8D00E5C0E6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		85F0EF88255E842D0022CA55 /* sshuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sshuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F0EF8B255E842D0022CA55 /* sshuoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sshuoApp.swift; sourceTree = "<group>"; };
 		85F0EF8F255E842E0022CA55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,7 +39,7 @@
 		85F0EFA6255E87450022CA55 /* AnalyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyView.swift; sourceTree = "<group>"; };
 		85F0EFA9255E87700022CA55 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		85F0EFAC255E878B0022CA55 /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
-		85F0EFAF255E87B30022CA55 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; tabWidth = 4; };
+		85F0EFAF255E87B30022CA55 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		85F0EFB2255E95BD0022CA55 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		85F0EFC6255EDEBD0022CA55 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
 		85F0EFD3255F7F750022CA55 /* DWLinerBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWLinerBackgroundModifier.swift; sourceTree = "<group>"; };
@@ -63,6 +71,14 @@
 			path = Buttom;
 			sourceTree = "<group>";
 		};
+		854255AE2560DAED00CCAD4D /* BlockList */ = {
+			isa = PBXGroup;
+			children = (
+				854255B42560E28800CCAD4D /* BlockList.swift */,
+			);
+			path = BlockList;
+			sourceTree = "<group>";
+		};
 		85F0EF7F255E842D0022CA55 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +106,7 @@
 				85F0EF8B255E842D0022CA55 /* sshuoApp.swift */,
 				85F0EF8F255E842E0022CA55 /* Assets.xcassets */,
 				85F0EF94255E842E0022CA55 /* Info.plist */,
+				85ABD62925616E8D00E5C0E6 /* Launch Screen.storyboard */,
 				85F0EF91255E842E0022CA55 /* Preview Content */,
 			);
 			path = sshuo;
@@ -118,17 +135,17 @@
 				85F0EFA0255E86D30022CA55 /* Analy */,
 				85F0EF9F255E86AF0022CA55 /* Diary */,
 				85F0EF9E255E86A10022CA55 /* Share */,
-				85F0EF9D255E86980022CA55 /* Mine */,
+				85F0EF9D255E86980022CA55 /* Account */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		85F0EF9D255E86980022CA55 /* Mine */ = {
+		85F0EF9D255E86980022CA55 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				85F0EFAF255E87B30022CA55 /* MineView.swift */,
+				85F0EFAF255E87B30022CA55 /* AccountView.swift */,
 			);
-			path = Mine;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		85F0EF9E255E86A10022CA55 /* Share */ = {
@@ -166,8 +183,10 @@
 		85F0EFCA255F7BF10022CA55 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				854255AE2560DAED00CCAD4D /* BlockList */,
 				854255A92560492000CCAD4D /* Buttom */,
 				85F0EFCB255F7BFC0022CA55 /* View */,
+				85ABD5B4256156EC00E5C0E6 /* Arrow.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -201,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				85F0EFD3255F7F750022CA55 /* DWLinerBackgroundModifier.swift */,
+				854255AB2560D77500CCAD4D /* ModuleViewModifier.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -269,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85ABD62A25616E8D00E5C0E6 /* Launch Screen.storyboard in Resources */,
 				85F0EF93255E842E0022CA55 /* Preview Assets.xcassets in Resources */,
 				85F0EF90255E842E0022CA55 /* Assets.xcassets in Resources */,
 			);
@@ -284,10 +305,13 @@
 				85F0EFAA255E87700022CA55 /* DiaryView.swift in Sources */,
 				85F0EFAD255E878B0022CA55 /* Share.swift in Sources */,
 				85F0EFA2255E86FD0022CA55 /* HomeView.swift in Sources */,
-				85F0EFB0255E87B30022CA55 /* MineView.swift in Sources */,
+				85F0EFB0255E87B30022CA55 /* AccountView.swift in Sources */,
 				85F0EFA7255E87450022CA55 /* AnalyView.swift in Sources */,
+				85ABD5B5256156EC00E5C0E6 /* Arrow.swift in Sources */,
+				854255B52560E28800CCAD4D /* BlockList.swift in Sources */,
 				85F0EFC7255EDEBD0022CA55 /* MainTheme.swift in Sources */,
 				85F0EFD4255F7F750022CA55 /* DWLinerBackgroundModifier.swift in Sources */,
+				854255AC2560D77500CCAD4D /* ModuleViewModifier.swift in Sources */,
 				854255A62560491300CCAD4D /* Buttom.swift in Sources */,
 				85F0EF8C255E842D0022CA55 /* sshuoApp.swift in Sources */,
 			);
