@@ -7,6 +7,16 @@
 
 import UIKit
 
+func _init(context: SceneDelegate, scene: UIScene) {
+    let win = UIWindow(windowScene: scene as! UIWindowScene)
+    
+    context.window = win
+    context.window?.makeKeyAndVisible()
+
+    // 进入广告模块逻辑
+    AdvertInit(win)
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -17,6 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+
+        _init(context: self, scene: scene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
