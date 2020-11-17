@@ -18,9 +18,10 @@
 		854FCC262563B59400B0C9B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FCC232563B59400B0C9B4 /* ViewController.swift */; };
 		854FCC272563B59400B0C9B4 /* SimpleLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FCC242563B59400B0C9B4 /* SimpleLayoutViewController.swift */; };
 		854FCC282563B59400B0C9B4 /* BasicUIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FCC252563B59400B0C9B4 /* BasicUIScrollViewController.swift */; };
+		854FCC2D2563B64400B0C9B4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854FCC2C2563B64400B0C9B4 /* Log.swift */; };
+		854FCC472563C7E200B0C9B4 /* AppInfo.log in Resources */ = {isa = PBXBuildFile; fileRef = 854FCC462563C7E200B0C9B4 /* AppInfo.log */; };
 		8565948A2563A9E2000B22E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856594892563A9E2000B22E2 /* AppDelegate.swift */; };
 		8565948C2563A9E2000B22E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565948B2563A9E2000B22E2 /* SceneDelegate.swift */; };
-		8565948E2563A9E2000B22E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565948D2563A9E2000B22E2 /* ViewController.swift */; };
 		856594932563A9E4000B22E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856594922563A9E4000B22E2 /* Assets.xcassets */; };
 		856594962563A9E4000B22E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856594942563A9E4000B22E2 /* LaunchScreen.storyboard */; };
 		B07AA42175B462269AC43CA6 /* Pods_sshuo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C19A273CC5A26C2AE9D768 /* Pods_sshuo.framework */; };
@@ -40,10 +41,11 @@
 		854FCC232563B59400B0C9B4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		854FCC242563B59400B0C9B4 /* SimpleLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLayoutViewController.swift; sourceTree = "<group>"; };
 		854FCC252563B59400B0C9B4 /* BasicUIScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicUIScrollViewController.swift; sourceTree = "<group>"; };
+		854FCC2C2563B64400B0C9B4 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		854FCC462563C7E200B0C9B4 /* AppInfo.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppInfo.log; sourceTree = "<group>"; };
 		856594862563A9E2000B22E2 /* sshuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sshuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856594892563A9E2000B22E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8565948B2563A9E2000B22E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8565948D2563A9E2000B22E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		856594922563A9E4000B22E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856594952563A9E4000B22E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856594972563A9E4000B22E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,9 +159,34 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		854FCC2A2563B62A00B0C9B4 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				854FCC2B2563B63900B0C9B4 /* Log */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		854FCC2B2563B63900B0C9B4 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				854FCC2C2563B64400B0C9B4 /* Log.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		854FCC452563C7C200B0C9B4 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				854FCC462563C7E200B0C9B4 /* AppInfo.log */,
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
 		8565947D2563A9E2000B22E2 = {
 			isa = PBXGroup;
 			children = (
+				854FCC452563C7C200B0C9B4 /* Doc */,
 				854FCC002563B2C500B0C9B4 /* Resource */,
 				856594882563A9E2000B22E2 /* sshuo */,
 				856594872563A9E2000B22E2 /* Products */,
@@ -179,12 +206,12 @@
 		856594882563A9E2000B22E2 /* sshuo */ = {
 			isa = PBXGroup;
 			children = (
+				854FCC2A2563B62A00B0C9B4 /* Public */,
 				854FCC222563B59400B0C9B4 /* Test */,
 				854FCC1C2563B3E300B0C9B4 /* Theme */,
 				854FCC072563B3C400B0C9B4 /* Module */,
 				856594892563A9E2000B22E2 /* AppDelegate.swift */,
 				8565948B2563A9E2000B22E2 /* SceneDelegate.swift */,
-				8565948D2563A9E2000B22E2 /* ViewController.swift */,
 				856594922563A9E4000B22E2 /* Assets.xcassets */,
 				856594942563A9E4000B22E2 /* LaunchScreen.storyboard */,
 				856594972563A9E4000B22E2 /* Info.plist */,
@@ -262,6 +289,7 @@
 			files = (
 				854FCC012563B2C500B0C9B4 /* Resource in Resources */,
 				856594962563A9E4000B22E2 /* LaunchScreen.storyboard in Resources */,
+				854FCC472563C7E200B0C9B4 /* AppInfo.log in Resources */,
 				856594932563A9E4000B22E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,13 +344,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				854FCC152563B3C400B0C9B4 /* Square.swift in Sources */,
-				8565948E2563A9E2000B22E2 /* ViewController.swift in Sources */,
 				854FCC162563B3C400B0C9B4 /* Home.swift in Sources */,
 				8565948A2563A9E2000B22E2 /* AppDelegate.swift in Sources */,
 				854FCC282563B59400B0C9B4 /* BasicUIScrollViewController.swift in Sources */,
 				854FCC262563B59400B0C9B4 /* ViewController.swift in Sources */,
 				854FCC1E2563B3E300B0C9B4 /* MainTheme.swift in Sources */,
 				8565948C2563A9E2000B22E2 /* SceneDelegate.swift in Sources */,
+				854FCC2D2563B64400B0C9B4 /* Log.swift in Sources */,
 				854FCC192563B3C400B0C9B4 /* Advert.swift in Sources */,
 				854FCC272563B59400B0C9B4 /* SimpleLayoutViewController.swift in Sources */,
 				854FCC1A2563B3C400B0C9B4 /* Login.swift in Sources */,

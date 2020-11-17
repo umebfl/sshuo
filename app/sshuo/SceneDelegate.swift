@@ -15,6 +15,8 @@ func _init(context: SceneDelegate, scene: UIScene) {
 
     // 进入广告模块逻辑
     AdvertInit(win)
+    
+    log.verbose("完成SceneDelegate-_init")
 }
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -29,6 +31,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 
         _init(context: self, scene: scene)
+
+        log.verbose("完成SceneDelegate-scene")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
