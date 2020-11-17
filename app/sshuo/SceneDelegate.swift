@@ -7,14 +7,29 @@
 
 import UIKit
 
+fileprivate var _rootWindow: UIWindow?
+
+var rootWindow: UIWindow {
+    get {
+        return _rootWindow!
+    }
+
+    set {
+        _rootWindow = newValue
+    }
+}
+
 func _init(context: SceneDelegate, scene: UIScene) {
     let win = UIWindow(windowScene: scene as! UIWindowScene)
     
+    rootWindow = win
+
     context.window = win
     context.window?.makeKeyAndVisible()
+    
 
     // 进入广告模块逻辑
-    AdvertInit(win)
+    AdvertInit()
     
     log.verbose("完成SceneDelegate-_init")
 }

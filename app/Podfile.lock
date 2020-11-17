@@ -1,20 +1,24 @@
 PODS:
+  - SnapKit (5.0.1)
   - SwiftMoment (0.7)
   - SwiftyBeaver (1.9.3)
 
 DEPENDENCIES:
+  - SnapKit (~> 5.0.0)
   - SwiftMoment
   - SwiftyBeaver
 
 SPEC REPOS:
   trunk:
+    - SnapKit
     - SwiftMoment
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftMoment: dc6dd27012e267819104cbb03f74ff9192dd0b42
   SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
 
-PODFILE CHECKSUM: 1949cd62109dd35ad2005e2bac1d477028d55dcd
+PODFILE CHECKSUM: 98a575cf4f068fd3f6d07b29e9c9e1580c959dc2
 
 COCOAPODS: 1.9.1

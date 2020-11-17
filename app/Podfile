@@ -7,10 +7,10 @@ target 'sshuo' do
 
   # Pods for sshuo
   #pod "ESPullToRefresh"
-  #pod 'SnapKit', '~> 5.0.0'
   #pod 'Kingfisher'
   #pod 'RAMAnimatedTabBarController'
   #pod 'ReachabilitySwift'
+  pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftyBeaver'
   pod 'SwiftMoment'
 

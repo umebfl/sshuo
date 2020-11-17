@@ -47,12 +47,13 @@ struct TabInfo {
     var actIcon: String
 }
 
-func HomeInit(_ win: UIWindow) {
+func HomeInit() {
     
 //  登录校验
     if(true) {
+        log.verbose("已登录")
         // 已登录, 跳转Home
-        win.rootViewController = Home()
+        rootWindow.rootViewController = Home()
     } else {
         // 未登录, 跳转登录页
 //        win.rootViewController = Login()

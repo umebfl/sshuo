@@ -1,5 +1,6 @@
 import UIKit
 import SwiftMoment
+import SnapKit
 
 // 是否第一次打开
 let DEF_ADVERT_ISFIRSTOPEN = "ADVERT_ISFIRSTOPEN"
@@ -12,6 +13,10 @@ let DEF_ADVERT_LASTSHOWTIME = "ADVERT_LASTSHOWTIME"
 // 请求广告资源次数
 let DEF_ADVERT_FETCHCOUNT = "DEF_ADVERT_FETCHCOUNT"
 
+// 广告展示时间
+let ADVERT_DURATION = 3
+// 自动跳转延迟时间
+let ADVERT_JUMP_DURATION = -1
 
 // 获取广告资源
 fileprivate func fetchAdvertResource() {
@@ -34,11 +39,19 @@ fileprivate func fetchAdvertResource() {
     log.verbose("获取广告资源 count: \(fetchCount)")
 }
 
+
 // 展示广告
-fileprivate func showAdvertView(_ win: UIWindow) {
+fileprivate func showAdvertView() {
     log.verbose("展示广告")
+    
+    let advertView = Advert()
+
     // 打开广告页
-    win.rootViewController = Advert()
+    let navView = UINavigationController(rootViewController: advertView)
+//    navVIew.isNavigationBarHidden = true
+    navView.navigationController?.setNavigationBarHidden(true, animated: true)
+    
+    rootWindow.rootViewController = navView
     
     // 设置单日展示标记
     let now = moment()
@@ -106,7 +119,7 @@ fileprivate func checkAdvertHasCache() -> Bool {
 // 展示广告后, 如果势wifi环境, 则刷新广告资源
 // 挑战到广告页后, N秒/手动跳转到登录页/首页
 // 点击跳转到广告webview
-func AdvertInit(_ win: UIWindow) {
+func AdvertInit() {
     log.verbose("进入AdvertInit")
 
     // 跳过广告页场景:
@@ -123,22 +136,22 @@ func AdvertInit(_ win: UIWindow) {
         UserDefaults.standard.setValue(false, forKey: DEF_ADVERT_ISFIRSTOPEN)
         
         // 跳转登录页逻辑
-        HomeInit(win)
+        HomeInit()
         return
     } else if(checkAdvertHasCache()) {
 
         if(!checkAdvertShowLate() == false) {
-            showAdvertView(win)
+            showAdvertView()
             return
         }
         
-        HomeInit(win)
+        HomeInit()
         return
     } else {
         // 请求资源
         fetchAdvertResource()
         // 跳转登录页逻辑
-        HomeInit(win)
+        HomeInit()
         return
     }
 }
@@ -148,40 +161,128 @@ func AdvertInit(_ win: UIWindow) {
 // 延迟3秒后, 可点击关闭按钮, 调用登录逻辑
 
 class Advert: UIViewController {
+    
+    var timer = Timer()
+    let bgView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    
+    // 已经跳转到详情页
+    var isJumpToAdvertDetail = false
+    
+    
+    
+    @objc func jumpToAdvertDetail() {
+        
+//        self.timer.invalidate()
 
+        isJumpToAdvertDetail = true
+        
+        log.verbose("跳转到广告详情页")
+        self.navigationController?.pushViewController(AdvertDetail(), animated: true)
+    }
+
+    @objc func jumpToHomeInit() {
+        
+        self.timer.invalidate()
+
+        log.verbose("跳转到HomeInit")
+        HomeInit()
+    }
+    
+    func BuildAdvertView() {
+
+        let sview = self.view!
+        
+        var duration = ADVERT_DURATION
+
+        let tipsLab = UILabel()
+        let numLab = UILabel()
+        let jumpBtn = UIButton()
+        
+        let src = UserDefaults.standard.string(forKey: DEF_ADVERT_RESOURCESRC)
+
+        bgView.image = UIImage(named: src ?? "Advert1")
+
+        sview.addSubview(bgView)
+        sview.addSubview(tipsLab)
+        sview.addSubview(jumpBtn)
+        sview.addSubview(numLab)
+        
+        tipsLab.text = I18n("广告")
+        tipsLab.backgroundColor = depAp3Color
+        tipsLab.textColor = UIColor.white
+        tipsLab.font = UIFont.boldSystemFont(ofSize: 10)
+        tipsLab.textAlignment = NSTextAlignment.center
+        tipsLab.snp.makeConstraints { make in
+            make.top.equalTo(sview).inset(52)
+            make.right.equalTo(sview).inset(18)
+            make.size.equalTo(CGSize(width: 26, height: 14))
+        }
+
+        jumpBtn.setTitle(I18n("跳过") + " |  ", for: .normal)
+        jumpBtn.backgroundColor = depAp3Color
+        jumpBtn.setTitleColor(UIColor.white, for: .normal)
+    //    jumpBtn.setTitleColor(lightAp2Color, for: .highlighted)
+        jumpBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        jumpBtn.layer.cornerRadius = 15
+        jumpBtn.snp.makeConstraints { make in
+            make.bottom.equalTo(sview).inset(96)
+            make.right.equalTo(sview).inset(12)
+            make.size.equalTo(CGSize(width: 72, height: 30))
+        }
+        
+        numLab.text = String(duration)
+        numLab.textColor = UIColor.white
+        numLab.font = UIFont.boldSystemFont(ofSize: 12)
+        numLab.snp.makeConstraints { make in
+            make.bottom.equalTo(sview).inset(104)
+            make.right.equalTo(sview).inset(18)
+            make.size.equalTo(CGSize(width: 12, height: 12))
+        }
+
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+
+            duration -= 1
+
+            numLab.text = String(duration >= 0 ? duration : 0)
+
+            if(duration <= 0) {
+                jumpBtn.backgroundColor = depAp5Color
+                // 绑定跳转事件, 提供手动跳转
+                jumpBtn.addTarget(self, action: #selector(self.jumpToHomeInit), for: .touchUpInside)
+            }
+            
+            // 延迟2秒跳转
+            if(duration < ADVERT_JUMP_DURATION) {
+                self.timer.invalidate()
+                
+                if(self.isJumpToAdvertDetail == false) {
+                    // 自动跳转到登录逻辑
+                    self.jumpToHomeInit()
+                }
+            }
+        })
+        
+        // 图片绑定跳转事件
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(jumpToAdvertDetail))
+        bgView.addGestureRecognizer(singleTapGesture)
+        bgView.isUserInteractionEnabled = true
+    }
+ 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         log.verbose("打开广告页")
 
-        self.view.addSubview(BuildAdvertView())
+        BuildAdvertView()
     }
 }
 
-func BuildAdvertView() -> UIView {
 
-    let Container = UIView()
-
-//    let tipsLab = UILabel()
-//    let jumpBtn = UIButton()
-//    
-////        let src = UserDefaults.standard.string(forKey: DEF_ADVERT_RESOURCESRC)
-//
-//    let bgView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-//
-////    bgView.image = UIImage(named: "Advert4")
-////    
-////    Container.addSubview(bgView)
-////    
-////    tipsLab.text = "广告"
-////    tipsLab.textColor = ""
-////    tipsLab.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
-////    Container.addSubview(tipsLab)
-////    
-////    
-////    jumpBtn.titleLabel = "跳过"
-////    Container.addSubview(jumpBtn)
-
-    return Container
-    
-}
