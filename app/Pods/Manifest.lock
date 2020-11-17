@@ -1,16 +1,20 @@
 PODS:
+  - SwiftMoment (0.7)
   - SwiftyBeaver (1.9.3)
 
 DEPENDENCIES:
+  - SwiftMoment
   - SwiftyBeaver
 
 SPEC REPOS:
   trunk:
+    - SwiftMoment
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
+  SwiftMoment: dc6dd27012e267819104cbb03f74ff9192dd0b42
   SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
 
-PODFILE CHECKSUM: 6e48f8fffb96869fc7bedc24720b158f16f09b71
+PODFILE CHECKSUM: 1949cd62109dd35ad2005e2bac1d477028d55dcd
 
 COCOAPODS: 1.9.1

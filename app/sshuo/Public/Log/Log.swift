@@ -18,8 +18,13 @@ func LogInit() {
 
         file.format = "$Dyy-MM-dd HH:mm:ss.SSS $d $C $L $c: $M"
         file.logFileURL = URL(fileURLWithPath: "/tmp/app.log")
+//        file.minLevel = Level.info
     
         log.verbose("\n\n\n\n启动日志:")
+    
+        let console = ConsoleDestination()
+        console.format = "$Dyy-MM-dd HH:mm:ss.SSS $d $C $L $c: $M"
+        log.addDestination(console)
     #else
         // 发送错误日志到服务器
 

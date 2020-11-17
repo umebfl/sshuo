@@ -12,5 +12,6 @@ target 'sshuo' do
   #pod 'RAMAnimatedTabBarController'
   #pod 'ReachabilitySwift'
   pod 'SwiftyBeaver'
+  pod 'SwiftMoment'
 
 end
